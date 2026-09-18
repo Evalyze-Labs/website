@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Shield } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { OrcidIcon } from './OrcidIcon';
 
 interface FooterProps {
@@ -7,6 +7,8 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const logoSrc = 'https://github.com/user-attachments/assets/92e368f1-c914-4769-93ec-ddc3294d59d4';
+
   const handleNav = (path: string, e: React.MouseEvent) => {
     e.preventDefault();
     onNavigate(path);
@@ -20,10 +22,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Brand & Purpose */}
           <div className="footer-brand">
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-              <div className="brand-symbol" style={{ width: '24px', height: '24px' }}>
-                <Shield size={14} color="#00E5A3" />
-              </div>
-              <strong style={{ fontSize: '1.05rem', color: 'var(--text-primary)' }}>Evalyze Labs</strong>
+              <img
+                src={logoSrc}
+                alt="Evalyze Labs"
+                className="footer-logo-image"
+              />
             </div>
             <p style={{ color: 'var(--text-muted)' }}>
               Independent AI research lab focused on understanding, evaluating, and improving intelligent systems. 

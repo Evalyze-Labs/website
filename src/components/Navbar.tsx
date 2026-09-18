@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ExternalLink, Shield } from 'lucide-react';
+import { Menu, X, ExternalLink } from 'lucide-react';
 
 interface NavbarProps {
   currentPath: string;
@@ -8,6 +8,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ currentPath, onNavigate }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const logoSrc = 'https://github.com/user-attachments/assets/92e368f1-c914-4769-93ec-ddc3294d59d4';
 
   const navItems = [
     { label: 'Research', path: '/research' },
@@ -35,13 +36,11 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, onNavigate }) => {
           className="nav-brand"
           aria-label="Evalyze Labs Home"
         >
-          <div className="brand-symbol">
-            <Shield size={16} color="#00E5A3" />
-          </div>
-          <div className="brand-text">
-            <span className="brand-title">Evalyze Labs</span>
-            <span className="brand-sub">Independent AI Research</span>
-          </div>
+          <img
+            src={logoSrc}
+            alt="Evalyze Labs"
+            className="nav-logo-image"
+          />
         </a>
 
         {/* Desktop Navigation */}
