@@ -24,12 +24,19 @@
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.125rem;
-  letter-spacing: -0.02em;
   color: var(--text-primary);
+}
+
+.nav-logo-image {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.footer-logo-image {
+  height: 56px;
+  width: auto;
+  display: block;
 }
 
 .brand-symbol {
