@@ -19,18 +19,18 @@ export const ResearchPage: React.FC<ResearchPageProps> = ({ onNavigate }) => {
           <div className="section-kicker">AREAS OF INVESTIGATION</div>
           <h1>Research at Evalyze Labs</h1>
           <p>
-            Our work is organized around fundamental problem domains in intelligent systems. 
-            We do not publish speculative future roadmaps or uncommitted milestones; instead, 
+            Our work is organized around fundamental problem domains in intelligent systems.
+            We do not publish speculative future roadmaps or uncommitted milestones; instead,
             we pursue foundational empirical questions through open benchmark instruments and rigorous experimentation.
           </p>
         </div>
 
         {/* Interactive Pillar Selector Tabs */}
-        <div style={{ 
-          display: 'flex', 
-          gap: '8px', 
-          overflowX: 'auto', 
-          paddingBottom: '12px', 
+        <div style={{
+          display: 'flex',
+          gap: '8px',
+          overflowX: 'auto',
+          paddingBottom: '12px',
           borderBottom: '1px solid var(--border-hairline)',
           marginBottom: '32px'
         }}>
@@ -47,11 +47,11 @@ export const ResearchPage: React.FC<ResearchPageProps> = ({ onNavigate }) => {
         </div>
 
         {/* Active Area Detailed Inspection View */}
-        <div style={{ 
-          background: 'var(--bg-surface)', 
-          border: '1px solid var(--border-hairline)', 
-          borderRadius: 'var(--radius-sm)', 
-          padding: 'var(--space-8)' 
+        <div style={{
+          background: 'var(--bg-surface)',
+          border: '1px solid var(--border-hairline)',
+          borderRadius: 'var(--radius-sm)',
+          padding: 'var(--space-8)'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
             <span className="badge badge-accent font-mono">ACTIVE PILLAR</span>
@@ -126,12 +126,12 @@ export const ResearchPage: React.FC<ResearchPageProps> = ({ onNavigate }) => {
           </div>
 
           {/* Related Benchmark Series Link */}
-          <div style={{ 
-            marginTop: '32px', 
-            paddingTop: '20px', 
-            borderTop: '1px solid var(--border-hairline)', 
-            display: 'flex', 
-            justifyContent: 'space-between', 
+          <div style={{
+            marginTop: '32px',
+            paddingTop: '20px',
+            borderTop: '1px solid var(--border-hairline)',
+            display: 'flex',
+            justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
             gap: '12px'
@@ -139,8 +139,8 @@ export const ResearchPage: React.FC<ResearchPageProps> = ({ onNavigate }) => {
             <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
               Empirical implementations published in the <strong>AgentShield Bench Series</strong>.
             </div>
-            <button 
-              onClick={() => onNavigate('/benchmarks')} 
+            <button
+              onClick={() => onNavigate('/benchmarks')}
               className="btn btn-secondary btn-sm"
             >
               View Related Benchmarks
@@ -158,8 +158,8 @@ export const ResearchPage: React.FC<ResearchPageProps> = ({ onNavigate }) => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px' }}>
             {RESEARCH_AREAS.map((area) => (
-              <div 
-                key={area.id} 
+              <div
+                key={area.id}
                 className={`card ${activeAreaId === area.id ? 'card-interactive' : ''}`}
                 style={{ borderColor: activeAreaId === area.id ? 'var(--accent-primary)' : undefined, cursor: 'pointer' }}
                 onClick={() => {
