@@ -115,9 +115,9 @@ export const CollaboratePage: React.FC = () => {
             flexWrap: 'wrap',
             gap: '8px'
           }}>
-            <span>research@evalyze.org</span>
+            <span>ruhanmulla07@gmail.com</span>
             <button
-              onClick={() => handleCopyEmail('research@evalyze.org')}
+              onClick={() => handleCopyEmail('ruhanmulla07@gmail.com')}
               className="btn btn-outline btn-sm"
               style={{ padding: '4px 10px', fontSize: '0.75rem' }}
             >
